@@ -8,9 +8,9 @@ pipeline {
 
     parameters {
         // DockerHub 사용자명 입력
-        string(name: 'DOCKERHUB_USERNAME',  defaultValue: '', description: 'DockerHub 사용자명을 입력하세요.')
+        string(name: 'DOCKERHUB_USERNAME',  defaultValue: 'choiwj', description: 'DockerHub 사용자명을 입력하세요.')
         // GitHub  사용자명 입력
-        string(name: 'GITHUB_USERNAME',  defaultValue: '', description: 'GitHub  사용자명을 입력하세요.')
+        string(name: 'GITHUB_USERNAME',  defaultValue: 'wooneojun', description: 'GitHub  사용자명을 입력하세요.')
     }
 
     environment {
