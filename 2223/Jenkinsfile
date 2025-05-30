@@ -8,16 +8,12 @@ pipeline {
 
     parameters {
         // 배포 환경 선택
-        choice(choices: ['dev', 'qa', 'prod'], name: 'PROFILE', description: '배포 환경 선택')
-        // DockerHub 사용자명 입력
-        string(name: 'DOCKERHUB_USERNAME',  defaultValue: '', description: 'DockerHub 사용자명을 입력하세요.')
-        // GitHub  사용자명 입력
-        string(name: 'GITHUB_USERNAME',  defaultValue: '', description: 'GitHub  사용자명을 입력하세요.')
+        choice(choices: ['dev', 'qa', 'prod'], name: 'PROFILE', description: '배포 환경 선택'
     }
 
     environment {
-        // DOCKERHUB_USERNAME = ""
-        // GITHUB_USERNAME = ""
+        DOCKERHUB_USERNAME = "choiwj"
+        GITHUB_USERNAME = "wooneojun"
 
         // 아래 부분 수정(x)
         GITHUB_URL = "https://github.com/${GITHUB_USERNAME}/kubernetes-anotherclass-sprint2.git"
