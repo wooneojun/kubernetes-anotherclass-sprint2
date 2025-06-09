@@ -45,24 +45,24 @@ spec:
           envFrom:
             - configMapRef:
                 name: api-tester-2234-properties
-          startupProbe:
-            httpGet:
-              path: "/startup"
-              port: 8080
-            periodSeconds: 5
-            failureThreshold: 24
+#          startupProbe:
+#            httpGet:
+#              path: "/startup"
+#              port: 8080
+#            periodSeconds: 5
+#            failureThreshold: 24
           readinessProbe:
             httpGet:
               path: "/readiness"
               port: 8080
             periodSeconds: 10
             failureThreshold: 3
-          livenessProbe:
-            httpGet:
-              path: "/liveness"
-              port: 8080
-            periodSeconds: 10
-            failureThreshold: 3
+#          livenessProbe:
+#            httpGet:
+#              path: "/liveness"
+#              port: 8080
+#            periodSeconds: 10
+#            failureThreshold: 3
           resources:
             requests:
               memory: "100Mi"
